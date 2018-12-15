@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace exceptionsProject
+namespace Collections
 {
 
     class Person

@@ -1,24 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace exceptionsProject
+namespace Collections
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //    try
-            //    {
-            //        int b = 100;
-            //        int a = b / 0;
-            //        Console.WriteLine(a);
+            try
+            {
+                int b = 100;
+                int a = b / 0;
+                Console.WriteLine(a);
 
-            //    }
-            //    catch (DivideByZeroException exception)
-            //    {
-            //        Console.WriteLine("Ooops!Something happened.");
-            //        Console.WriteLine(exception.Message);
-            //        Console.WriteLine(exception.StackTrace);
-            //    }
+            }
+            catch (DivideByZeroException exception)
+            {
+                Console.WriteLine("Ooops!Something happened.");
+                Console.WriteLine(exception.Message);
+                Console.WriteLine(exception.StackTrace);
+            }
             try
             {
                 Person person = new Person(15);
@@ -42,6 +43,24 @@ namespace exceptionsProject
                 Console.WriteLine(ex.Message + ex.GetType());
 
             }
+
+            Dictionary <string, decimal> dict = new Dictionary<string, decimal>();
+            dict.Add("Gigi", 30.23m);
+            dict.Add("Ion", 37.23m);
+            dict.Add("Craciun", 50.23m);
+
+            foreach(var record in dict)
+            {
+                Console.WriteLine($"{record.Key}:{record.Value}");
+            }
+
+
+
+
+
+
+
+
 
 
         }
